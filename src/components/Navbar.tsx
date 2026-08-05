@@ -34,9 +34,6 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
           >
             <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-2">
               <div className="flex items-center gap-2 truncate">
-                <span className="bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded text-[10px] uppercase font-black shrink-0 flex items-center gap-1">
-                  <Flame className="w-3 h-3 text-blue-600" /> US Healthcare Agency
-                </span>
                 <span className="text-slate-600 truncate">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
               </div>
 
