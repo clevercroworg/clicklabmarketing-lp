@@ -35,17 +35,14 @@ export function ComparisonSection() {
     <section className="py-16 sm:py-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 rounded-full px-4 py-1.5 text-xs font-black text-blue-800 uppercase tracking-widest mb-4">
+          <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 rounded-full px-4 py-1.5 text-xs font-black text-blue-800 uppercase tracking-widest mb-3">
             Why Rehabs Choose Us
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
-            Traditional Marketing Agencies vs. <br />
-            <span className="text-gradient-blue bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
-              ClickLab Healthcare Engine
-            </span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3">
+            Why Treatment Centers Choose ClickLab
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-normal">
-            See why leading US addiction treatment centers switch from general marketing agencies to ClickLab.
+          <p className="text-xs sm:text-base text-slate-600 font-normal">
+            See how ClickLab specialized healthcare marketing compares to generic agencies.
           </p>
         </div>
 

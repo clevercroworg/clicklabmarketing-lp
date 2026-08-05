@@ -50,16 +50,16 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
           {/* Left Column: Headlines & 3 Value Pillars */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-3.5 py-1.5 text-[11px] sm:text-xs font-extrabold text-blue-700 uppercase tracking-widest mb-4">
-              Custom Strategies
+              Our Core Pillars
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
               Healthcare Marketing <br />
-              <span className="text-gradient-blue bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">
-                That Drives Real Growth.
+              <span className="text-blue-600">
+                That Drives Real Growth
               </span>
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal mb-8">
-              Custom strategies to generate more leads, increase admissions and grow sustainably for US treatment centers.
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-8">
+              Proven digital strategies to generate qualified leads, increase patient admissions, and grow sustainably.
             </p>
 
             {/* 3 Pillars List */}
@@ -115,7 +115,7 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
         {/* Bottom Banner */}
         <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 border border-blue-900/50 text-center sm:text-left">
           <div>
-            <h4 className="text-lg sm:text-xl font-bold text-white mb-1">Built Exclusively for US Treatment Facilities</h4>
+            <h4 className="text-base sm:text-xl font-bold text-white mb-1">Built for US Treatment Facilities</h4>
             <p className="text-xs sm:text-sm text-slate-300">
               Ethical healthcare marketing strategies that fill beds and deliver transparent month-over-month ROI.
             </p>
