@@ -7,9 +7,9 @@ import { MetricsBar } from "@/components/MetricsBar";
 import { WorldwideClients } from "@/components/WorldwideClients";
 import { GrowthPillars } from "@/components/GrowthPillars";
 import { ToolsCarousel } from "@/components/ToolsCarousel";
-import { ReviewsSection } from "@/components/ReviewsSection";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { CallAdmissions } from "@/components/CallAdmissions";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
@@ -41,14 +41,14 @@ export default function Home() {
       {/* Infrastructure: The Tech We Master Marquee Section */}
       <ToolsCarousel />
 
-      {/* Client Success Stories */}
-      <ReviewsSection />
-
       {/* Before vs After Comparison Table */}
       <ComparisonSection />
 
       {/* Turn Calls into New Admissions Grid + Intake Desk Reception Photo Feature */}
       <CallAdmissions onOpenBooking={openBookingModal} />
+
+      {/* Client Success Stories Reviews (Positioned further down near FAQ) */}
+      <ReviewsSection />
 
       {/* FAQ Accordion Section */}
       <FAQSection />
