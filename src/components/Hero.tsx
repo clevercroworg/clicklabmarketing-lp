@@ -44,13 +44,18 @@ export function Hero({ onOpenBooking }: HeroProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] sm:leading-[1.1] mb-4">
               More Calls. <br />
               More Admissions. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-300 to-white">
                 More Lives Changed.
               </span>
             </h1>
+
+            {/* Subtitle / Supporting Text */}
+            <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed mb-6 font-normal">
+              We engineer LegitScript-compliant Google Ads, SEO & high-converting intake campaigns designed exclusively for US addiction rehab centers to fill beds, increase qualified calls, and maximize ROI.
+            </p>
 
             {/* Feature Highlight Box */}
             <div className="w-full max-w-lg bg-slate-900/90 backdrop-blur-md border border-blue-500/30 rounded-2xl p-4 sm:p-5 mb-6 sm:mb-8 shadow-2xl flex items-center gap-4 sm:gap-5">
