@@ -1,13 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Calendar, Heart, TrendingUp, Users, PhoneCall, CheckCircle2, ArrowUpRight, ShieldCheck } from "lucide-react";
+import { Phone, Calendar, Heart, TrendingUp, Users, PhoneCall, CheckCircle2, ShieldCheck, Search, Activity, Zap } from "lucide-react";
 
 interface HeroProps {
   onOpenBooking: () => void;
 }
 
 export function Hero({ onOpenBooking }: HeroProps) {
+  const keywords = [
+    { text: "drug rehab near me", position: "#1 Rank", ctr: "11.4% CTR" },
+    { text: "inpatient detox facility", position: "#1 Rank", ctr: "9.8% CTR" },
+    { text: "addiction treatment center", position: "#1 Rank", ctr: "12.1% CTR" },
+  ];
+
   return (
     <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-gradient-to-b from-[#0b192c] via-[#0f172a] to-[#1e3a8a] text-white">
       {/* Background Decor Shapes */}
@@ -51,7 +57,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
               We engineer LegitScript-compliant Google Ads, SEO & high-converting intake campaigns designed exclusively for US addiction rehab centers to fill beds, increase qualified calls, and maximize ROI.
             </p>
 
-            {/* Feature Highlight Box (Replicating Image 1 left box) */}
+            {/* Feature Highlight Box */}
             <div className="w-full max-w-lg bg-slate-900/90 backdrop-blur-md border border-blue-500/30 rounded-2xl p-4 sm:p-5 mb-6 sm:mb-8 shadow-2xl flex items-center gap-4 sm:gap-5">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center shadow-lg shadow-cyan-500/20 shrink-0">
                 <Heart className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2]" />
@@ -104,7 +110,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
             </div>
           </motion.div>
 
-          {/* Right Column: Premium Live Admissions Dashboard Visual */}
+          {/* Right Column: Professional US Rehab Campaign Console (Realistic Enterprise Interface) */}
           <motion.div
             className="lg:col-span-5 relative"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -114,113 +120,106 @@ export function Hero({ onOpenBooking }: HeroProps) {
             {/* Ambient Glow */}
             <div className="absolute -inset-2 bg-gradient-to-tr from-cyan-500/20 via-blue-600/15 to-transparent rounded-[32px] blur-2xl pointer-events-none" />
 
-            <div className="relative bg-slate-900/90 border border-slate-800 rounded-[28px] p-6 sm:p-7 shadow-2xl overflow-hidden backdrop-blur-xl">
-              {/* Top Gradient Accent Line */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400" />
-
+            <div className="relative bg-slate-900/95 border border-slate-800 rounded-2xl sm:rounded-[28px] p-5 sm:p-6 shadow-2xl overflow-hidden backdrop-blur-xl">
               {/* Header Bar */}
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5 pt-1">
-                <div className="flex items-center gap-3">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                <div className="flex items-center gap-2.5">
                   <div className="relative flex items-center justify-center">
-                    <span className="w-3 h-3 rounded-full bg-emerald-400 inline-block" />
-                    <span className="absolute w-3 h-3 rounded-full bg-emerald-400 animate-ping opacity-75" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block" />
+                    <span className="absolute w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping opacity-75" />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-extrabold text-white text-base tracking-tight">Live Growth Dashboard</h3>
-                      <span className="text-[10px] font-black uppercase tracking-wider bg-blue-500/20 text-cyan-300 border border-blue-400/30 px-2 py-0.5 rounded-md">
-                        US REHAB
+                    <h3 className="font-extrabold text-white text-xs sm:text-sm tracking-tight flex items-center gap-2">
+                      US Rehab Growth Console
+                      <span className="text-[9px] font-black uppercase tracking-wider bg-blue-500/20 text-cyan-300 border border-blue-400/30 px-2 py-0.5 rounded-md">
+                        LIVE ENGINE
                       </span>
-                    </div>
-                    <p className="text-xs text-slate-400 font-medium mt-0.5">Real-time Intake Analytics</p>
+                    </h3>
+                    <p className="text-[11px] text-slate-400 font-medium">Google Ads & Call Desk Integration</p>
                   </div>
                 </div>
-                <span className="text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1.5 rounded-xl flex items-center gap-1">
-                  <ArrowUpRight className="w-3.5 h-3.5" /> +21% Growth
+
+                <span className="text-[11px] font-black bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 px-2.5 py-1 rounded-lg">
+                  LegitScript Verified
                 </span>
               </div>
 
-              {/* Metric Card 1: New Enquiries */}
-              <div className="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 mb-4 transition-all flex items-center justify-between group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/30 border border-blue-500/40 text-cyan-400 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-                    <PhoneCall className="w-6 h-6 stroke-[2.2]" />
+              {/* 2x2 Metric Grid */}
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5">
+                  <div className="flex items-center gap-2 mb-1 text-slate-400 text-[10px] font-extrabold uppercase tracking-wider">
+                    <PhoneCall className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Inbound Calls</span>
                   </div>
-                  <div>
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">New Enquiries</span>
-                    <h4 className="text-2xl font-black text-white tracking-tight">128</h4>
-                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-white">142 <span className="text-xs font-extrabold text-emerald-400">▲ 34%</span></div>
+                  <span className="text-[10px] text-slate-400">Exclusive patient calls</span>
                 </div>
-                <div className="text-right">
-                  <span className="text-xs font-bold text-slate-400">This Week</span>
-                  <div className="text-xs font-black text-emerald-400 flex items-center justify-end gap-1 mt-0.5">
-                    <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-md font-extrabold">▲ 18%</span>
+
+                <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5">
+                  <div className="flex items-center gap-2 mb-1 text-slate-400 text-[10px] font-extrabold uppercase tracking-wider">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Insurance Qual</span>
                   </div>
+                  <div className="text-xl sm:text-2xl font-black text-emerald-400">64.8%</div>
+                  <span className="text-[10px] text-slate-400">Commercial PPO / HMO</span>
+                </div>
+
+                <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5">
+                  <div className="flex items-center gap-2 mb-1 text-slate-400 text-[10px] font-extrabold uppercase tracking-wider">
+                    <Search className="w-3.5 h-3.5 text-blue-400" />
+                    <span>Ad Rank</span>
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-cyan-300">#1 Spot</div>
+                  <span className="text-[10px] text-slate-400">94.2% Impression Share</span>
+                </div>
+
+                <div className="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3.5">
+                  <div className="flex items-center gap-2 mb-1 text-slate-400 text-[10px] font-extrabold uppercase tracking-wider">
+                    <Zap className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Cost Per Intake</span>
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black text-white">$1,240</div>
+                  <span className="text-[10px] text-emerald-400">-48% vs Industry Avg</span>
                 </div>
               </div>
 
-              {/* Metric Card 2: Admissions */}
-              <div className="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-4 mb-5 transition-all flex items-center justify-between group">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-cyan-600/30 border border-cyan-500/40 text-cyan-300 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-                    <Users className="w-6 h-6 stroke-[2.2]" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block">Confirmed Admissions</span>
-                    <h4 className="text-2xl font-black text-white tracking-tight">43</h4>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <span className="text-xs font-bold text-slate-400">This Week</span>
-                  <div className="text-xs font-black text-emerald-400 flex items-center justify-end gap-1 mt-0.5">
-                    <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-md font-extrabold">▲ 21%</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Impact Chart Card */}
-              <div className="bg-slate-950 text-white rounded-2xl p-4 sm:p-5 shadow-xl border border-slate-800 relative overflow-hidden">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-cyan-400" />
-                    <span className="text-xs font-extrabold tracking-wider text-slate-200 uppercase">Impact Trend</span>
-                  </div>
-                  <span className="text-[11px] font-bold text-cyan-300 bg-cyan-950/80 border border-cyan-800/60 px-2.5 py-0.5 rounded-full">
-                    Last 30 Days
+              {/* Live Keyword Search Stream */}
+              <div className="bg-slate-950 rounded-xl p-3.5 border border-slate-800 mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] font-extrabold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <Activity className="w-3.5 h-3.5 text-cyan-400" />
+                    Live Ad Keyword Rankings
                   </span>
+                  <span className="text-[10px] text-emerald-400 font-bold">100% Active</span>
                 </div>
 
-                {/* SVG Line Graph */}
-                <div className="h-24 w-full relative overflow-hidden rounded-xl bg-slate-900/80 p-2 border border-slate-800">
-                  <svg className="w-full h-full" viewBox="0 0 320 80" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient id="dashboardChartGradDark" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.45" />
-                        <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.0" />
-                      </linearGradient>
-                    </defs>
-
-                    <line x1="0" y1="20" x2="320" y2="20" stroke="#334155" strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
-                    <line x1="0" y1="50" x2="320" y2="50" stroke="#334155" strokeWidth="1" strokeDasharray="3 3" opacity="0.5" />
-
-                    <path
-                      d="M 10 65 Q 80 58 150 42 T 260 25 T 310 18 L 310 75 L 10 75 Z"
-                      fill="url(#dashboardChartGradDark)"
-                    />
-
-                    <path
-                      d="M 10 65 Q 80 58 150 42 T 260 25 T 310 18"
-                      fill="none"
-                      stroke="#38bdf8"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-
-                    <circle cx="310" cy="18" r="6" fill="#38bdf8" opacity="0.3" className="animate-ping" />
-                    <circle cx="310" cy="18" r="4" fill="#38bdf8" />
-                    <circle cx="310" cy="18" r="2" fill="#ffffff" />
-                  </svg>
+                <div className="space-y-2">
+                  {keywords.map((kw) => (
+                    <div
+                      key={kw.text}
+                      className="bg-slate-900/90 border border-slate-800 rounded-lg px-3 py-1.5 flex items-center justify-between text-xs"
+                    >
+                      <span className="text-slate-200 font-medium text-[11px] truncate mr-2">&ldquo;{kw.text}&rdquo;</span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-[10px] font-black bg-blue-500/20 text-cyan-300 px-2 py-0.5 rounded border border-blue-400/30">
+                          {kw.position}
+                        </span>
+                        <span className="text-[10px] font-bold text-slate-400">{kw.ctr}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
+              </div>
+
+              {/* Live Activity Routing Badge */}
+              <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between text-xs text-emerald-300 font-bold">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[11px]">Latest Inbound Call Routed to Intake Desk</span>
+                </div>
+                <span className="text-[10px] font-black text-cyan-300 bg-emerald-900/60 px-2 py-0.5 rounded">
+                  2m ago
+                </span>
               </div>
             </div>
           </motion.div>
