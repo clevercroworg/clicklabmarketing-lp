@@ -21,21 +21,26 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
-      {/* Top Announcement Bar (Matching Main Website Top Bar) */}
-      <div className="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-950 text-white text-[11px] font-bold py-1.5 px-4 border-b border-blue-900/40 hidden md:block">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded text-[10px] uppercase font-black border border-cyan-400/30 flex items-center gap-1">
-              <Flame className="w-3 h-3 text-cyan-400" /> US Healthcare Agency
+    <div className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {/* Top Announcement Bar - White BG, disappears smoothly when scrolled */}
+      <div
+        className={`bg-white border-b border-slate-200 text-slate-800 text-[11px] sm:text-xs font-bold py-2 px-4 transition-all duration-300 overflow-hidden ${
+          isScrolled ? "max-h-0 py-0 opacity-0 border-none" : "max-h-12 opacity-100"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 truncate">
+            <span className="bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded text-[10px] uppercase font-black shrink-0 flex items-center gap-1">
+              <Flame className="w-3 h-3 text-blue-600" /> US Healthcare Agency
             </span>
-            <span className="text-slate-300">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
+            <span className="text-slate-600 truncate">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
           </div>
 
-          <div className="flex items-center gap-4 text-slate-300">
-            <a href="tel:2164088962" className="hover:text-cyan-300 transition-colors flex items-center gap-1.5">
-              <Phone className="w-3 h-3 text-cyan-400" />
-              <span>Direct Intake Desk: <strong className="text-white font-extrabold">(216) 408-8962</strong></span>
+          <div className="flex items-center gap-3 shrink-0">
+            <a href="tel:2164088962" className="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+              <Phone className="w-3 h-3 text-blue-600" />
+              <span className="hidden sm:inline">Direct Intake Desk:</span>
+              <strong className="text-slate-900 font-extrabold">(216) 408-8962</strong>
             </a>
           </div>
         </div>
