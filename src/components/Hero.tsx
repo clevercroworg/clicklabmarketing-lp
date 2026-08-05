@@ -33,8 +33,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
             transition={{ duration: 0.6 }}
           >
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-3.5 py-1.5 mb-5 text-[11px] sm:text-sm font-bold text-cyan-300 tracking-wide shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shrink-0" />
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 mb-5 text-[11px] sm:text-sm font-bold text-cyan-300 tracking-wide shadow-xs">
               <span>Digital Marketing Exclusively for US Addiction Rehabs</span>
             </div>
 
