@@ -92,22 +92,6 @@ export function Hero({ onOpenBooking }: HeroProps) {
                 <span>Book Free Strategy Call</span>
               </button>
             </div>
-
-            {/* Micro Trust Points */}
-            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold text-slate-300">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>US LegitScript & HIPAA Aligned</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>Verified US Bed Occupancy Growth</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>24/7 Strategy Support</span>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right Column: Professional US Rehab Campaign Console (Realistic Enterprise Interface) */}
