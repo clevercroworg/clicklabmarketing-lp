@@ -5,8 +5,8 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { MetricsBar } from "@/components/MetricsBar";
 import { WorldwideClients } from "@/components/WorldwideClients";
-import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { GrowthPillars } from "@/components/GrowthPillars";
+import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { CallAdmissions } from "@/components/CallAdmissions";
@@ -35,11 +35,11 @@ export default function Home() {
       {/* Worldwide Clients Marquee Carousel */}
       <WorldwideClients />
 
-      {/* Infrastructure: The Tech We Master Marquee Section */}
-      <ToolsCarousel />
-
       {/* 3 Healthcare Marketing Growth Pillars + Executive Agency Team Photo Feature */}
       <GrowthPillars onOpenBooking={openBookingModal} />
+
+      {/* Infrastructure: The Tech We Master Marquee Section */}
+      <ToolsCarousel />
 
       {/* Client Success Stories */}
       <ReviewsSection />
