@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { MetricsBar } from "@/components/MetricsBar";
 import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { GrowthPillars } from "@/components/GrowthPillars";
 import { PositionMatters } from "@/components/PositionMatters";
+import { CaseStudies } from "@/components/CaseStudies";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { CallAdmissions } from "@/components/CallAdmissions";
 import { FAQSection } from "@/components/FAQSection";
@@ -27,6 +29,9 @@ export default function Home() {
       {/* Hero Section with Premium Dark Blue Theme */}
       <Hero onOpenBooking={openBookingModal} />
 
+      {/* Verified Agency Metrics & Track Record Counter Bar */}
+      <MetricsBar />
+
       {/* Infrastructure: The Tech We Master Marquee Section */}
       <ToolsCarousel />
 
@@ -35,6 +40,9 @@ export default function Home() {
 
       {/* Position Matters & Google Search Rank #1 Placement Mockup */}
       <PositionMatters onOpenBooking={openBookingModal} />
+
+      {/* Real US Rehab Client Success Stories */}
+      <CaseStudies onOpenBooking={openBookingModal} />
 
       {/* Before vs After Comparison Table */}
       <ComparisonSection />
