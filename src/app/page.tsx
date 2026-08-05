@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { ROICalculator } from "@/components/ROICalculator";
+import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { GrowthPillars } from "@/components/GrowthPillars";
 import { PositionMatters } from "@/components/PositionMatters";
 import { ComparisonSection } from "@/components/ComparisonSection";
@@ -21,14 +21,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-slate-50 relative selection:bg-blue-600 selection:text-white">
-      {/* Navigation Header (Logo + Call CTA only - NO top menu links per client req) */}
+      {/* Navigation Header */}
       <Navbar onOpenBooking={openBookingModal} />
 
-      {/* Hero Section with Live Enquiries & Admissions Dashboard */}
+      {/* Hero Section with Premium Dark Blue Theme */}
       <Hero onOpenBooking={openBookingModal} />
 
-      {/* Interactive Admissions ROI Growth Calculator */}
-      <ROICalculator onOpenBooking={openBookingModal} />
+      {/* Infrastructure: The Tech We Master Marquee Section */}
+      <ToolsCarousel />
 
       {/* 3 Healthcare Marketing Growth Pillars + Doctor Specialist Photo Feature */}
       <GrowthPillars onOpenBooking={openBookingModal} />
