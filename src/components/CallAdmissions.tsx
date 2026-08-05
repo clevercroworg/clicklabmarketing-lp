@@ -88,8 +88,8 @@ export function CallAdmissions({ onOpenBooking }: CallAdmissionsProps) {
             <div className="lg:col-span-6 relative">
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl">
                 <Image
-                  src="/images/intake_coordinator.png"
-                  alt="Intake Coordinator Specialist Answering Patient Calls"
+                  src="/images/rehab_admissions_desk.png"
+                  alt="Professional US Treatment Center Admissions & Reception Desk Handling Calls"
                   fill
                   priority
                   className="object-cover object-center hover:scale-105 transition-transform duration-700"

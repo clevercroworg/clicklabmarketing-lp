@@ -89,23 +89,23 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
           <div className="lg:col-span-5 relative w-full">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-[4/3] sm:aspect-[4/3] lg:aspect-[3/4]">
               <Image
-                src="/images/doctor_specialist.png"
-                alt="Healthcare Marketing Specialist & Medical Director"
+                src="/images/clicklab_growth_agency.png"
+                alt="ClickLab Digital Marketing Agency Strategy Session for US Healthcare Clients"
                 fill
                 priority
-                className="object-cover object-top hover:scale-105 transition-transform duration-700"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700"
               />
               {/* Subtle Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
               {/* Floating Overlay Badge */}
-              <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-xl flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/60 shadow-xl flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-slate-900">LegitScript & HIPAA Aligned</h4>
-                  <p className="text-xs text-slate-600 font-medium">Protecting your center&apos;s brand authority.</p>
+                  <h4 className="text-xs sm:text-sm font-black text-slate-900">ClickLab Healthcare Engine</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-600 font-medium">LegitScript & HIPAA Aligned Growth Strategy.</p>
                 </div>
               </div>
             </div>
