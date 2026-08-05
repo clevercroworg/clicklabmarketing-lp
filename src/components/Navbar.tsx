@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Calendar, ArrowRight, ShieldCheck, Flame } from "lucide-react";
 
 interface NavbarProps {
@@ -21,30 +22,35 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top Announcement Bar - White BG, disappears smoothly when scrolled */}
-      <div
-        className={`bg-white border-b border-slate-200 text-slate-800 text-[11px] sm:text-xs font-bold py-2 px-4 transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 py-0 opacity-0 border-none" : "max-h-12 opacity-100"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 truncate">
-            <span className="bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded text-[10px] uppercase font-black shrink-0 flex items-center gap-1">
-              <Flame className="w-3 h-3 text-blue-600" /> US Healthcare Agency
-            </span>
-            <span className="text-slate-600 truncate">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
-          </div>
+    <div className="fixed top-0 left-0 right-0 z-50">
+      {/* Top Announcement Bar - Collapses smoothly with AnimatePresence */}
+      <AnimatePresence>
+        {!isScrolled && (
+          <motion.div
+            initial={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden bg-white border-b border-slate-200 text-slate-800 text-[11px] sm:text-xs font-bold"
+          >
+            <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 truncate">
+                <span className="bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded text-[10px] uppercase font-black shrink-0 flex items-center gap-1">
+                  <Flame className="w-3 h-3 text-blue-600" /> US Healthcare Agency
+                </span>
+                <span className="text-slate-600 truncate">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
+              </div>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <a href="tel:2164088962" className="hover:text-blue-600 transition-colors flex items-center gap-1.5">
-              <Phone className="w-3 h-3 text-blue-600" />
-              <span className="hidden sm:inline">Direct Intake Desk:</span>
-              <strong className="text-slate-900 font-extrabold">(216) 408-8962</strong>
-            </a>
-          </div>
-        </div>
-      </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <a href="tel:2164088962" className="hover:text-blue-600 transition-colors flex items-center gap-1.5">
+                  <Phone className="w-3 h-3 text-blue-600" />
+                  <span className="hidden sm:inline">Direct Intake Desk:</span>
+                  <strong className="text-slate-900 font-extrabold">(216) 408-8962</strong>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Main Sticky Header */}
       <header
