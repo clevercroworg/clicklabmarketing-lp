@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { MetricsBar } from "@/components/MetricsBar";
+import { WorldwideClients } from "@/components/WorldwideClients";
 import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { GrowthPillars } from "@/components/GrowthPillars";
 import { ReviewsSection } from "@/components/ReviewsSection";
@@ -22,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-slate-50 relative selection:bg-blue-600 selection:text-white">
-      {/* Navigation Header (Logo + Direct Call CTA only) */}
+      {/* Navigation Header */}
       <Navbar onOpenBooking={openBookingModal} />
 
       {/* Hero Section with Premium Dark Navy Theme */}
@@ -31,13 +32,16 @@ export default function Home() {
       {/* Verified Agency Metrics & Track Record Counter Bar */}
       <MetricsBar />
 
+      {/* Worldwide Clients Marquee Carousel */}
+      <WorldwideClients />
+
       {/* Infrastructure: The Tech We Master Marquee Section */}
       <ToolsCarousel />
 
       {/* 3 Healthcare Marketing Growth Pillars + Executive Agency Team Photo Feature */}
       <GrowthPillars onOpenBooking={openBookingModal} />
 
-      {/* 5-Star Client Executive Reviews & Testimonials */}
+      {/* Client Success Stories */}
       <ReviewsSection />
 
       {/* Before vs After Comparison Table */}
