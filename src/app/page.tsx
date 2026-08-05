@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { ROICalculator } from "@/components/ROICalculator";
 import { GrowthPillars } from "@/components/GrowthPillars";
 import { PositionMatters } from "@/components/PositionMatters";
+import { ComparisonSection } from "@/components/ComparisonSection";
 import { CallAdmissions } from "@/components/CallAdmissions";
-import { CallCTABanner } from "@/components/CallCTABanner";
+import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { MobileStickyBar } from "@/components/MobileStickyBar";
 import { LeadFormModal } from "@/components/LeadFormModal";
@@ -19,39 +21,34 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-slate-50 relative selection:bg-blue-600 selection:text-white">
-      {/* Navigation Header */}
+      {/* Navigation Header (Logo + Call CTA only - NO top menu links per client req) */}
       <Navbar onOpenBooking={openBookingModal} />
 
       {/* Hero Section with Live Enquiries & Admissions Dashboard */}
       <Hero onOpenBooking={openBookingModal} />
 
-      {/* Inter-Section Call-to-Action Banner #1 */}
-      <CallCTABanner
-        headline="Let's Grow Your Center's Admissions"
-        subtext="Increase inquiries. Improve admissions. Change more lives."
-        onOpenBooking={openBookingModal}
-      />
+      {/* Interactive Admissions ROI Growth Calculator */}
+      <ROICalculator onOpenBooking={openBookingModal} />
 
-      {/* 3 Healthcare Marketing Growth Pillars */}
+      {/* 3 Healthcare Marketing Growth Pillars + Doctor Specialist Photo Feature */}
       <GrowthPillars onOpenBooking={openBookingModal} />
 
-      {/* Position Matters & Google Search Rank #1 Placement */}
+      {/* Position Matters & Google Search Rank #1 Placement Mockup */}
       <PositionMatters onOpenBooking={openBookingModal} />
 
-      {/* Inter-Section Call-to-Action Banner #2 */}
-      <CallCTABanner
-        headline="Be Their First Choice, Every Time."
-        subtext="Outrank competitors and attract qualified inquiries that turn into admissions."
-        onOpenBooking={openBookingModal}
-      />
+      {/* Before vs After Comparison Table */}
+      <ComparisonSection />
 
-      {/* Turn Calls into New Admissions Grid Section */}
+      {/* Turn Calls into New Admissions Grid + Intake Coordinator Photo Feature */}
       <CallAdmissions onOpenBooking={openBookingModal} />
 
-      {/* Main Footer */}
+      {/* FAQ Accordion Section */}
+      <FAQSection />
+
+      {/* Main Footer with White Logo */}
       <Footer />
 
-      {/* Mobile Persistent Call & Booking Bar */}
+      {/* Mobile Persistent Call Bar */}
       <MobileStickyBar onOpenBooking={openBookingModal} />
 
       {/* Lead Form Booking Modal */}
