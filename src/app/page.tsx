@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { MetricsBar } from "@/components/MetricsBar";
 import { WorldwideClients } from "@/components/WorldwideClients";
 import { GrowthPillars } from "@/components/GrowthPillars";
+import { PositionMatters } from "@/components/PositionMatters";
 import { ToolsCarousel } from "@/components/ToolsCarousel";
 import { ComparisonSection } from "@/components/ComparisonSection";
 import { CallAdmissions } from "@/components/CallAdmissions";
@@ -38,6 +39,9 @@ export default function Home() {
       {/* 3 Healthcare Marketing Growth Pillars + Executive Agency Team Photo Feature */}
       <GrowthPillars onOpenBooking={openBookingModal} />
 
+      {/* Be Their First Choice, Every Time Section (Matching Image 3 Poster) */}
+      <PositionMatters onOpenBooking={openBookingModal} />
+
       {/* Infrastructure: The Tech We Master Marquee Section */}
       <ToolsCarousel />
 
@@ -47,7 +51,7 @@ export default function Home() {
       {/* Turn Calls into New Admissions Grid + Intake Desk Reception Photo Feature */}
       <CallAdmissions onOpenBooking={openBookingModal} />
 
-      {/* Client Success Stories Reviews (Positioned further down near FAQ) */}
+      {/* Client Success Stories Reviews */}
       <ReviewsSection />
 
       {/* FAQ Accordion Section */}
