@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <defs>
+    <linearGradient id="border-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon -->
+  <rect width="48" height="48" rx="12" fill="url(#border-grad)"/>
+  <rect x="2" y="2" width="44" height="44" rx="10" fill="#0F172A"/>
+  <g transform="translate(12, 10) scale(1.1)">
+    <path d="M4 4l7.07 17 2.51-7.39L21 11.07z" fill="#60A5FA" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- ClickLab text -->
+  <text x="60" y="34" font-family="Inter, system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-0.5">ClickLab</text>
+</svg>
