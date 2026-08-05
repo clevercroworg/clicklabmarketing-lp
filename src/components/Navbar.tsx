@@ -33,8 +33,12 @@ export function Navbar({ onOpenBooking }: NavbarProps) {
             className="overflow-hidden bg-white border-b border-slate-200 text-slate-800 text-[11px] sm:text-xs font-bold"
           >
             <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-2">
-              <div className="flex items-center gap-2 truncate">
-                <span className="text-slate-600 truncate">100% LegitScript & HIPAA Aligned Ad Campaigns</span>
+              <div className="flex-1 overflow-hidden relative mr-2">
+                <div className="animate-marquee whitespace-nowrap flex items-center gap-8 text-slate-600 text-[11px] sm:text-xs font-bold w-[200%]">
+                  <span>🔥 100% LegitScript & HIPAA Aligned Ad Campaigns Exclusively for US Addiction Rehabs</span>
+                  <span>🔥 100% LegitScript & HIPAA Aligned Ad Campaigns Exclusively for US Addiction Rehabs</span>
+                  <span>🔥 100% LegitScript & HIPAA Aligned Ad Campaigns Exclusively for US Addiction Rehabs</span>
+                </div>
               </div>
 
               <div className="flex items-center gap-3 shrink-0">
