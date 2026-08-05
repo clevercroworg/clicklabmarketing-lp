@@ -31,35 +31,29 @@ export function ReviewsSection() {
   ];
 
   return (
-    <section id="reviews" className="py-12 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="success" className="py-12 sm:py-20 bg-slate-50 relative overflow-hidden border-y border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+        {/* Simple & Clean Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 text-xs font-black text-cyan-300 uppercase tracking-widest mb-3">
-            <ShieldCheck className="w-3.5 h-3.5" /> Client Testimonials
+          <div className="inline-flex items-center gap-2 bg-blue-100/80 border border-blue-200 rounded-full px-4 py-1.5 text-xs font-black text-blue-700 uppercase tracking-widest mb-3">
+            <ShieldCheck className="w-3.5 h-3.5" /> Client Success
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-3">
-            Trusted by Leading <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-300 to-white">
-              US Treatment Directors
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3">
+            Client Success Stories
           </h2>
-          <p className="text-xs sm:text-base text-slate-300 font-normal max-w-xl mx-auto">
-            See what healthcare executives and intake directors say about scaling bed occupancy with ClickLab Marketing.
+          <p className="text-sm sm:text-base text-slate-600 font-normal max-w-xl mx-auto">
+            See how leading US treatment centers scale bed occupancy and increase patient admissions with ClickLab Marketing.
           </p>
         </div>
 
-        {/* 3 Review Cards Grid */}
+        {/* 3 White Review Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {reviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-slate-800/80 border border-slate-700/80 rounded-2xl sm:rounded-3xl p-6 sm:p-7 shadow-xl flex flex-col justify-between hover:border-blue-500/50 transition-all overflow-hidden relative group"
+              className="bg-white border border-slate-200 rounded-2xl sm:rounded-3xl p-6 sm:p-7 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative group"
             >
-              <Quote className="absolute top-5 right-5 w-10 h-10 text-slate-700/40 pointer-events-none group-hover:text-blue-500/20 transition-colors" />
+              <Quote className="absolute top-5 right-5 w-10 h-10 text-slate-200 pointer-events-none group-hover:text-blue-100 transition-colors" />
 
               <div>
                 {/* 5-Star Rating */}
@@ -70,23 +64,23 @@ export function ReviewsSection() {
                 </div>
 
                 {/* Highlight Badge */}
-                <div className="inline-block bg-cyan-950/80 border border-cyan-500/30 text-cyan-300 font-bold text-xs px-3 py-1 rounded-lg mb-4">
+                <div className="inline-block bg-blue-50 border border-blue-200 text-blue-700 font-extrabold text-xs px-3 py-1 rounded-lg mb-4">
                   {rev.highlight}
                 </div>
 
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-medium">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
               {/* Author Info */}
-              <div className="pt-4 border-t border-slate-700/60 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-400 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-md">
+              <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-600 to-blue-700 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-md">
                   {rev.name.charAt(0)}
                 </div>
                 <div className="min-w-0">
-                  <h4 className="text-sm font-black text-white truncate">{rev.name}</h4>
-                  <p className="text-[11px] text-slate-400 font-medium truncate">{rev.title}</p>
+                  <h4 className="text-sm font-black text-slate-900 truncate">{rev.name}</h4>
+                  <p className="text-[11px] text-slate-500 font-medium truncate">{rev.title}</p>
                 </div>
               </div>
             </div>
