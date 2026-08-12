@@ -1,14 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { X, Phone, Calendar, CheckCircle2, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { X, Calendar, CheckCircle2, ArrowRight, Loader2 } from "lucide-react";
 
 interface LeadFormModalProps {
   isOpen: boolean;
   onClose: () => void;
+  redirectUrl?: string;
 }
 
-export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
+export function LeadFormModal({ isOpen, onClose, redirectUrl = "/rehab-digital-marketing/thank-you" }: LeadFormModalProps) {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -20,9 +24,34 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      // Post lead data to /api/contact email endpoint (powered by Resend)
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: formData.name,
+          lastName: "(Addiction Rehab Strategy Call)",
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.centerName,
+          service: `Addiction Rehab Marketing (${formData.bedCount})`,
+          message: `Strategy Call Request from ${formData.name} at ${formData.centerName}. Facility Capacity: ${formData.bedCount}. Direct Phone: ${formData.phone}`,
+        }),
+      });
+    } catch (err) {
+      console.error("Lead submission error:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => {
+        router.push(redirectUrl);
+      }, 600);
+    }
   };
 
   const handleReset = () => {
@@ -46,7 +75,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
           </span>
           <h3 className="text-2xl font-black text-white mt-1">Book Your Strategy Call</h3>
           <p className="text-xs text-slate-300 font-medium mt-1">
-            Let&apos;s analyze your center&apos;s digital marketing & admissions growth potential.
+            Let&apos;s analyze your center&apos;s digital marketing &amp; admissions growth potential.
           </p>
         </div>
 
@@ -59,7 +88,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
               </div>
               <h4 className="text-2xl font-black text-slate-900 mb-2">Strategy Call Requested!</h4>
               <p className="text-sm text-slate-600 mb-6">
-                Thank you, <strong>{formData.name || "there"}</strong>. Our senior growth strategist will contact you at <strong>{formData.phone || "your phone number"}</strong> shortly.
+                Thank you, <strong>{formData.name || "there"}</strong>. Redirecting you to your confirmation page...
               </p>
               <button
                 onClick={handleReset}
@@ -147,11 +176,21 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-black text-sm uppercase tracking-wider py-4 rounded-2xl shadow-xl shadow-blue-600/30 transition-all"
+                  disabled={isSubmitting}
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white font-black text-sm uppercase tracking-wider py-4 rounded-2xl shadow-xl shadow-blue-600/30 transition-all disabled:opacity-70"
                 >
-                  <Calendar className="w-5 h-5" />
-                  <span>Confirm Free Strategy Call</span>
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <span>Submitting Request...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Calendar className="w-5 h-5" />
+                      <span>Confirm Free Strategy Call</span>
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </>
+                  )}
                 </button>
               </div>
 
