@@ -61,7 +61,7 @@ export function CallCTABanner({
                   className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-black text-xs sm:text-base uppercase tracking-wider px-5 py-3.5 sm:py-4 rounded-2xl shadow-lg shadow-cyan-500/20 active:scale-98 transition-all group"
                 >
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
-                  <span>Book Free Strategy Call</span>
+                  <span>Book a Free Strategy Call</span>
                   <ArrowRight className="w-4 h-4 ml-0.5 group-hover:translate-x-1 transition-transform shrink-0" />
                 </button>
                 <p className="text-[11px] sm:text-xs text-slate-400 text-center lg:text-right mt-2 font-medium">

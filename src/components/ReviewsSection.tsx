@@ -42,7 +42,7 @@ export function ReviewsSection() {
             Client Success Stories
           </h2>
           <p className="text-sm sm:text-base text-slate-600 font-normal max-w-xl mx-auto">
-            See how leading US treatment centers scale bed occupancy and increase patient admissions with ClickLab Marketing.
+            See how leading treatment centers scale bed occupancy and increase patient admissions with the professionals at ClickLab Marketing.
           </p>
         </div>
 

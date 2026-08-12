@@ -40,7 +40,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
           >
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 mb-5 text-[11px] sm:text-sm font-bold text-cyan-300 tracking-wide shadow-xs">
-              <span>Digital Marketing Exclusively for US Addiction Rehabs</span>
+              <span>Digital Marketing designed for Addiction Treatment Centers</span>
             </div>
 
             {/* Main Headline */}
@@ -54,7 +54,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
 
             {/* Subtitle / Supporting Text */}
             <p className="text-sm sm:text-lg text-slate-300 max-w-2xl leading-relaxed mb-6 font-normal">
-              We engineer LegitScript-compliant Google Ads, SEO & high-converting intake campaigns designed exclusively for US addiction rehab centers to fill beds, increase qualified calls, and maximize ROI.
+              We engineer LegitScript-compliant Google Ads, SEO &amp; high-converting digital marketing campaigns designed exclusively for Addiction Treatment Centers to fill beds, increase qualified calls, and maximize ROI.
             </p>
 
             {/* Feature Highlight Box */}
@@ -89,7 +89,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-black text-sm sm:text-base px-6 py-3.5 sm:py-4 rounded-2xl border border-white/20 shadow-xs transition-all text-center"
               >
                 <Calendar className="w-4 h-4 text-cyan-400" />
-                <span>Book Free Strategy Call</span>
+                <span>Book a Free Strategy Call</span>
               </button>
             </div>
           </motion.div>

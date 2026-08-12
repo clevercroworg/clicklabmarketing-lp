@@ -109,11 +109,11 @@ export function CallAdmissions({ onOpenBooking }: CallAdmissionsProps) {
               </span>
 
               <h3 className="text-2xl sm:text-4xl font-black text-white leading-tight mb-3">
-                Turn Every Inbound Call Into an Active Bed Admission.
+                Turn Every Inbound Call into a new Admission
               </h3>
 
               <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed mb-6">
-                Our high-intent search campaigns bring pre-screened patients directly to your intake desk line with verified commercial insurance.
+                Our high-intent search campaigns bring new patients directly to your admissions team with verified commercial insurance.
               </p>
 
               <div className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-4">

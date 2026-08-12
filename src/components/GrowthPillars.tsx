@@ -59,7 +59,7 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
               </span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-8">
-              Proven digital strategies to generate qualified leads, increase patient admissions, and grow sustainably.
+              Proven digital strategies to generate qualified leads, increase patient admissions, and power sustainable growth.
             </p>
 
             {/* 3 Pillars List */}
@@ -115,7 +115,7 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
         {/* Bottom Banner */}
         <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 border border-blue-900/50 text-center sm:text-left">
           <div>
-            <h4 className="text-base sm:text-xl font-bold text-white mb-1">Built for US Treatment Facilities</h4>
+            <h4 className="text-base sm:text-xl font-bold text-white mb-1">Built for Behavioral Health Treatment Centers</h4>
             <p className="text-xs sm:text-sm text-slate-300">
               Ethical healthcare marketing strategies that fill beds and deliver transparent month-over-month ROI.
             </p>
@@ -125,7 +125,7 @@ export function GrowthPillars({ onOpenBooking }: GrowthPillarsProps) {
             onClick={onOpenBooking}
             className="w-full sm:w-auto bg-white text-slate-900 hover:bg-slate-100 font-black text-xs sm:text-sm px-6 py-3.5 rounded-2xl shrink-0 transition-all shadow-md text-center active:scale-98"
           >
-            Get Free Marketing Audit
+            Get a Free Marketing Audit
           </button>
         </div>
       </div>
